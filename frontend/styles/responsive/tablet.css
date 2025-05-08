@@ -61,7 +61,7 @@ header {
 
 .menu-navegacion a {
   text-decoration: none;
-  color: var(--color-texto);
+  color: var(--color-blanco);
 }
 
 .menu-navegacion a:hover {
