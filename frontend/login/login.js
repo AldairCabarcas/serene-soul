@@ -11,41 +11,32 @@ document.addEventListener("DOMContentLoaded", () => {
       const contrasena = passwordInput.value.trim();
       const mensajeError = document.getElementById("contraseñaIncorrecta");
 
+      // Determina la URL de la API según el entorno
       const API_URL =
         location.hostname === "127.0.0.1"
           ? "http://localhost:3000" // Si estás trabajando localmente
           : "https://servidor-serene-soul.up.railway.app"; // Si estás en producción
 
-      // Ejemplo de uso de la URL de la API
-      fetch(`${API_URL}/login`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ correo, contrasena }),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-
       try {
-        const respuesta = await fetch(
-          "https://servidor-serene-soul.up.railway.app/login",
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ correo, contrasena }),
-          }
-        );
+        // Realiza la solicitud al backend para loguear al usuario
+        const respuesta = await fetch(`${API_URL}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ correo, contrasena }),
+        });
 
         const resultado = await respuesta.json();
 
         if (respuesta.ok) {
           mensajeError.classList.add("oculto");
           localStorage.setItem("usuarioLogueado", "true");
-          window.location.href = "https://serene-soul.netlify.app"; // Redirige si todo está bien
+
+          // Redirige dependiendo del entorno
+          if (location.hostname === "127.0.0.1") {
+            window.location.href = "http://localhost:3000/dashboard"; // Redirige al entorno local
+          } else {
+            window.location.href = "https://serene-soul.netlify.app/dashboard"; // Redirige a producción (Netlify)
+          }
         } else {
           // Mostrar errores personalizados según el estado
           if (respuesta.status === 404) {
