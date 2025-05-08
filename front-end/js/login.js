@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mensajeError = document.getElementById("contraseñaIncorrecta");
 
     try {
-      const respuesta = await fetch("https://serene-soul.up.railway.app/login", {
+      const respuesta = await fetch("https://servidor-serene-soul.up.railway.app/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ correo, contrasena }),

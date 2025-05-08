@@ -71,7 +71,7 @@ formulario.addEventListener("submit", async (e) => {
 
   // Intentamos enviar los datos al servidor usando fetch.
   try {
-    const respuesta = await fetch("https://serene-soul.up.railway.app/registrar", {
+    const respuesta = await fetch("https://servidor-serene-soul.up.railway.app/registrar", {
       method: "POST", // Usamos el método POST para enviar los datos.
       headers: {
         "Content-Type": "application/json", // Indicamos que estamos enviando JSON.
