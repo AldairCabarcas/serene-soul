@@ -32,103 +32,18 @@
   --gris-claro: #ccc;
   --rojo-error: var(--color-error);
 }
-
-
+  
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--fuente-principal);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-
-body {
-  background: linear-gradient(135deg, var(--color-principal), var(--color-azul-claro)); /* Degradado bonito 💙 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+html{
+    font-size: 62.5%;
 }
-
-.login-container {
-  background-color: var(--color-blanco);
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px var(--sombra-suave);
-  width: 90%;
-  max-width: 400px;
-}
-
-h2 {
-  text-align: center;
-  color: var(--color-principal);
-  margin-bottom: 20px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin: 10px 0 5px;
-  color: var(--color-principal);
-}
-
-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  margin-top: 20px;
-  padding: 12px;
-  background-color: var(--color-principal);
-  color: var(--color-blanco);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--color-azul-claro);
-}
-
-.extra {
-  text-align: center;
-  margin-top: 15px;
-  color: var(--color-principal);
-}
-
-.extra a {
-  color: var(--color-enlace);
-  text-decoration: none;
-}
-
-.mensaje-error {
-  color: red;
-  margin-top: 10px;
-}
-
-.oculto {
-  display: none;
-}
-
-.campo-password {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.campo-password input {
-  padding-right: 40px;
-}
-
-.icono-ver {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  cursor: pointer;
-  font-size: 18px;
+body{
+    /* background-image: url('../image/img/wallpaper.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

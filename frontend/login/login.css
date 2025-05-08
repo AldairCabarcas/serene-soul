@@ -1,9 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--fuente-principal, 'Segoe UI', sans-serif);
-}
+@import url(../styles/generales.css);
 
 body {
   height: 100vh;
