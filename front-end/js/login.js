@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (respuesta.ok) {
         mensajeError.classList.add("oculto");
         localStorage.setItem("usuarioLogueado", "true");
-        window.location.href = "index.html"; // Redirige si todo está bien
+        window.location.href = "www.google.com"; // Redirige si todo está bien
       } else {
         // Mostrar errores personalizados según el estado
         if (respuesta.status === 404) {
