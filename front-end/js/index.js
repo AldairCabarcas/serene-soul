@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enlaceCerrarSesion.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("usuarioLogueado");
-      window.location.href = "/html/login.html";
+      window.location.href = "front-end/html/login.html";
     });
   }
 });
