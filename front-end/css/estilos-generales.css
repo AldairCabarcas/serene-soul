@@ -1,0 +1,32 @@
+:root {
+    --color-principal: #16254c;      /* Azul oscuro */
+    --color-secundario: #f0f4f8;     /* Fondo claro */
+    --color-acento: #f0f4f8;         /* Acento (usado también para botones) */
+    --color-hover: #16254c;          /* Color al pasar el mouse */
+    --color-texto: #1a1a1a;          /* Texto principal */
+    --color-subtexto: #555555;       /* Texto secundario */
+    --color-blanco: #ffffff;
+    --color-azul-claro: #e1e9f4;     /* Fondo de secciones claras */
+    --color-enlace: #4978d6;         /* Colores como 'multifactorial' en el texto */
+    --color-enlace-suave: #93c5fd;  /* Colores suaves como 'entorno social' */
+  
+    --fuente-principal: 'Segoe UI', sans-serif;
+    --espaciado-base: 16px;
+    --radio-borde: 8px;
+    --sombra-suave: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    /* background-image: url('../image/img/wallpaper.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

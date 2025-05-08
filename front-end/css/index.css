@@ -1,0 +1,403 @@
+@import url(estilos-generales.css); /* Importa estilos generales desde otro archivo */
+
+/* ---------- HEADER ---------- */
+header {
+  position: relative;
+  display: flex;
+  height: 188px;
+  justify-content: space-between;
+  align-content: center;
+  background-color: #16254c;
+  padding: 10px 20px;
+  flex-wrap: wrap; /* Permite que los hijos se acomoden en varias líneas si es necesario */
+}
+
+.contenedor-logo {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espacio entre elementos */
+}
+
+.contenedor-logo img {
+  border-radius: 50%; /* Hace la imagen redonda */
+  border: 2px solid white;
+}
+
+header h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.eslogan {
+  color: #d0d0d0;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* ---------- MENÚ DE NAVEGACIÓN MÓVIL ---------- */
+.menu-navegacion {
+  display: none; /* Oculta el menú inicialmente */
+  position: static;
+  top: 20px;
+  left: 20px;
+  width: 100%;
+  padding: 30px;
+  height: 100vh;
+  background-color: #16254c;
+  box-sizing: border-box;
+  overflow-y: auto;
+  flex-direction: column;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-20px); /* Animación al mostrarse */
+}
+
+.menu-navegacion.activo {
+  width: 250px;
+  height: 300px;
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: absolute;
+}
+.menu-navegacion ul {
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-navegacion li {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  list-style-type: none;
+}
+.menu-navegacion a {
+  color: white;
+  font-size: 1.4rem;
+  padding: 10px;
+  display: block;
+}
+
+.menu:not(.perfil) .submenu {
+  position: static;
+  height: 240px;
+  display: none;
+  width: 100%;
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.menu-navegacion .menu {
+margin-bottom: 20px;
+}
+
+
+.menu:hover .submenu {
+  display: none; /* Quita hover porque no aplica bien en móviles */
+}
+
+.menu.activo .submenu {
+  display: block; /* Muestra submenú al hacer clic */
+  height: 240px;
+}
+
+.menu.activo ul li {
+  text-align: left;
+  
+}
+/* Submenús plegables */
+.submenu {
+  transition: max-height 0.3s ease;
+  max-height: 0;
+  overflow-y: scroll;
+}
+
+
+.menu.activo .submenu {
+  max-height: 500px; /* Desplegar cuando activo */
+}
+
+
+/* ---------- BOTÓN HAMBURGUESA ---------- */
+.menu-toggle {
+  display: flex; /* Oculto por defecto, solo visible en móviles */
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.menu-icon {
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Cambia la hamburguesa a X */
+.menu-toggle.activo .menu-icon:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.menu-toggle.activo .menu-icon:nth-child(2) {
+  opacity: 0; /* Oculta la línea del medio */
+}
+
+.menu-toggle.activo .menu-icon:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+/* Contenedor del perfil en la parte superior derecha */
+.perfil-container {
+  position: absolute;
+  right: 20px; /* Ubica el perfil a la derecha */
+  top: 10px; /* Un pequeño margen superior */
+}
+
+/* Submenú del perfil */
+.perfil .submenu {
+  width: 80px;
+  display: none; /* Inicialmente oculto */
+  position: absolute;
+  right: 0;
+  top: 50px; /* Desplazado hacia abajo */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 999;
+}
+
+/* Mostrar el submenú cuando el perfil está activo */
+.perfil.activo .submenu {
+  display: block;
+}
+
+/* Submenú links */
+.perfil .submenu a {
+  color: #16254c;
+  padding: 10px 10px;
+  display: block;
+  text-decoration: none;
+}
+
+.perfil .submenu a:hover {
+  background-color: #f0f4f8;
+}
+
+/* Para hacer que el perfil funcione como menú desplegable */
+.menu-perfil {
+  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.submenu-perfil {
+  position: absolute;
+  top: 50px;
+  left: -25px;
+  width: 80px;
+  height: 70px;
+  display: none;
+  opacity: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f2ebeb;
+  z-index: 500;
+}
+
+.submenu-perfil li {
+  margin: 3px;
+  padding: 3px;
+  list-style: none;
+  text-align: center;
+}
+
+.perfil-btn img {
+  width: 40px; /* Ajusta el tamaño de la imagen */
+  height: 40px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  cursor: pointer;
+}
+.submenu-perfil li a {
+  font-weight: 500;
+  color: #1f3c68;
+  text-decoration: none;
+}
+
+/* Estilo de la imagen de perfil */
+
+/* ---------- SECCIÓN DE CONTENIDO ---------- */
+.salud-mental,
+.origen-trastorno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contenedor-calma img {
+  max-width: 100%;
+  height: auto;
+  opacity: 0.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mensaje-salud div {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 15px;
+}
+
+.mensaje-salud h2 {
+  font-size: 2.2rem;
+  color: #1e3d59;
+  margin-bottom: 10px;
+}
+
+.mensaje-salud p {
+  font-size: 1.6rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------- ORIGEN DE TRASTORNOS ---------- */
+.origen-trastorno {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #3a5a80;
+  border-radius: 8px;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.origen-trastorno h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #2a3f5f;
+  border-bottom: 2px solid #3a5a80;
+  padding-bottom: 0.5rem;
+}
+
+.origen-trastorno p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  color: #444;
+}
+
+.origen-trastorno strong {
+  color: #1f3c68;
+}
+
+.origen-trastorno em {
+  font-style: italic;
+  color: #5b708d;
+}
+
+/* ---------- NOTAS DESCRIPTIVAS ---------- */
+.notas-descriptivas {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 1200px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.notas-descriptivas h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d3c4a;
+  margin-bottom: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.notas {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.notas:hover {
+  transform: translateY(-3px); /* Efecto hover de flotación */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.notas img {
+  width: 140px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.notas p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-left: 1rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #f0f4f8;
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #d0d7dd;
+}
+
+.footer p:first-child {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.footer p:nth-child(2) {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #2a3d50;
+  margin-bottom: 1rem;
+}
+
+.redes span {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.redes span:hover {
+  transform: scale(1.2); /* Hace zoom al pasar el mouse */
+}

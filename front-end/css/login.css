@@ -1,0 +1,108 @@
+:root {
+  /* Colores principales que puedes reutilizar en todo el sitio */
+  --azul-oscuro: #16254c;
+  --azul-claro: #243b6b;
+  --blanco: #fdfdfd;
+  --sombra: rgba(0, 0, 0, 0.2); /* Para sombras suaves */
+}
+
+* {
+  /* Reseteo de márgenes y box-sizing para un diseño más predecible */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif; /* Fuente base del sitio */
+}
+
+body {
+  height: 100vh; /* Altura completa de la pantalla */
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-claro)); /* Degradado bonito 💙 */
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+}
+
+.login-container {
+  background-color: var(--blanco); /* Fondo del formulario */
+  padding: 40px; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px var(--sombra); /* Sombra para dar profundidad */
+  width: 90%;
+  max-width: 400px; /* Máximo tamaño para que no se vea gigante en pantallas grandes */
+}
+
+h2 {
+  text-align: center;
+  color: var(--azul-oscuro);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Campos uno debajo del otro */
+}
+
+label {
+  margin: 10px 0 5px;
+  color: var(--azul-oscuro);
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+button:hover {
+  background-color: var(--azul-claro); /* Cambio de color al pasar el mouse */
+}
+
+.extra {
+  text-align: center;
+  margin-top: 15px;
+  color: var(--azul-oscuro);
+}
+
+.extra a {
+  color: var(--azul-claro);
+  text-decoration: none;
+}
+
+.mensaje-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.oculto {
+  display: none; /* Clase útil para mostrar u ocultar elementos desde JS */
+}
+
+.campo-password {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-password input {
+  padding-right: 40px; /* deja espacio para el icono */
+}
+
+.icono-ver {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  user-select: none;
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Accede fácilmente a orientación emocional y apoyo psicológico desde cualquier lugar">
+    <link rel="stylesheet" href="./front-end/css/index.css">
+    <link rel="stylesheet" href="./front-end/css/tablet.css" media="(min-width: 768px)">
+    <title>Serene Soul</title>
+</head>
+
+<body>
+    <header>
+        <!-- Encabezado principal -->
+
+        <!-- Boton desplegable de perfil de usuario -->
+    
+        <div class="menu-perfil" id="perfil">
+            <a aria-haspopup="true" class="perfil-btn" id="perfil-btn" aria-expanded="false">
+                <img id="fotoPerfil" src="./front-end/image/img/default.avif" alt="Foto de perfil">
+            </a>
+            <ul class="submenu-perfil" aria-label="Opciones de perfil" hidden>
+                <li><a href="#">Editar perfil</a></li>
+                <li><a href="#">Configuración</a></li>
+                <li><a href="#" class="cerrar-sesion">Cerrar sesión</a></li>
+            </ul>
+        </div>
+
+        <!-- Botón hamburguesa para mostrar/ocultar el menú en dispositivos móviles -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menú principal" aria-expanded="false">
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+            <span class="menu-icon"></span>
+        </button>
+
+
+        <!-- Contenedor del logo de la página -->
+        <div class="contenedor-logo">
+            <img src="./front-end/image/img/logoweb-mini.webp" alt="Logo Serene Soul">
+            <h2>Serene Soul</h2>
+        </div>
+
+        <!-- Eslogan del sitio -->
+        <p class="eslogan">Una pausa suave en medio del ruido</p>
+
+        <!-- Menú de navegación principal -->
+        <nav class='menu-navegacion' id="menu">
+            <ul>
+                <li class='menu'><a href="#">INICIO</a></li>
+                <li class='menu'><a href="#">ESPECIALISTA</a>
+                    <!-- Submenú con enlaces a diferentes especialistas -->
+                    <ul class='submenu'>
+                        <li><a href="https://www.google.com" target='_blank'>Angie Solarte - Psiquiatra</a></li>
+                        <li><a href="#">Erwing Dávila - Psiquiatra infante</a></li>
+                        <li><a href="#">Juan Carlos Rodríguez - Psicólogo</a></li>
+                        <li><a href="#">Aldair Cabarcas - Neuropsicólogo</a></li>
+                        <li><a href="#">Daniela Iriarte - Psicóloga clínica</a></li>
+                    </ul>
+                </li>
+                <li class='menu'><a href="#">SERVICIOS</a>
+                    <!-- Submenú con tipos de servicios ofrecidos -->
+                    <ul class='submenu'>
+                        <li><a href="#">Psiquiatría</a></li>
+                        <li><a href="#">Psicoterapia</a></li>
+                        <li><a href="#">Psicología infanto-juvenil</a></li>
+                        <li><a href="#">Terapia de pareja</a></li>
+                        <li><a href="#">Neuropsicología</a></li>
+                    </ul>
+                </li>
+                <li class='menu'><a href="#">BLOG</a>
+                    <!-- Submenú con información institucional -->
+                    <ul class='submenu'>
+                        <li><a href="#">¿Quiénes somos?</a></li>
+                        <li><a href="#">Misión</a></li>
+                        <li><a href="#">Visión</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="salud-mental">
+        <!-- Contenido principal de la página -->
+
+        <div class="contenedor-calma">
+            <!-- Imagen representativa de calma emocional -->
+            <img src="./front-end/image/img/calma.jpg">
+        </div>
+
+        <section class="mensaje-salud">
+            <!-- Mensaje principal motivacional -->
+            <div>
+                <h2>"Cuidar tu mente es amarte por completo"</h2>
+                <p>Descubre herramientas, consejos y apoyo para fortalecer tu bienestar emocional. Porque tu paz
+                    interior es tan importante como tu salud física.</p>
+            </div>
+        </section>
+
+        <section class='origen-trastorno'>
+            <!-- Información sobre el origen de los trastornos mentales -->
+            <h2>Origen de los trastornos mentales</h2>
+
+            <p>
+                Los profesionales de la salud mental coinciden en que el origen de los trastornos mentales es
+                <strong>multifactorial</strong>, es decir, no se debe a una sola causa, sino a la interacción de
+                múltiples factores.
+            </p>
+
+            <p>
+                Las <strong>experiencias de vida</strong>, especialmente durante la infancia, son determinantes.
+                Eventos traumáticos como el <strong>abuso infantil</strong> representan un alto riesgo de desarrollar
+                trastornos mentales en la adultez.
+            </p>
+
+            <p>
+                Cuidar la salud mental comienza por <em>reconocer, comprender y sanar esas heridas invisibles</em>.
+            </p>
+        </section>
+
+        <section class='notas-descriptivas'>
+            <!-- Galería de temas sobre trastornos mentales -->
+            <div>
+                <h2>Notas descriptivas</h2>
+            </div>
+            <div class='notas notas--bipolaridad'>
+                <img src="./front-end/image/img/trastorno-bipolar.avif" alt="Imagen sobre trastorno bipolar">
+                <p>Trastorno bipolar</p>
+            </div>
+
+            <div class='notas notas--depresion'>
+                <img src="./front-end/image/img/depresion.avif" alt="Imagen sobre depresión">
+                <p>Depresión</p>
+            </div>
+
+            <div class='notas notas--esquizofrenia'>
+                <img src="./front-end/image/img/esquizofrenia.avif" alt="Imagen sobre esquizofrenia">
+                <span></span>
+                <p>Esquizofrenia</p>
+            </div>
+
+            <div class='notas notas--suicidio'>
+                <img src="./front-end/image/img/suicidio.avif" alt="Imagen sobre suicidio">
+                <p>Suicidio</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <!-- Pie de página con información de derechos y redes sociales -->
+        <div class='footer'>
+            <p>Derechos reservados 2024 ©</p>
+            <p>Redes sociales</p>
+        </div>
+        <div class='redes'>
+            <!-- Íconos de redes sociales -->
+            <p>
+                <span class='fb'><a href="#">
+                        <img src="./front-end/image/assets/fb.svg" alt="Facebook">
+                    </a></span>
+                <span class='ig'><a href="#">
+                        <img src="./front-end/image/assets/ig.svg" alt="Instagram">
+                    </a></span>
+                <span class='tk'><a href="#">
+                        <img src="./front-end/image/assets/tk.png" alt="TikTok" width="38px"
+                            style="padding-bottom: 3px;">
+                    </a></span>
+                <span class='yt'><a href="#">
+                        <img src="./front-end/image/assets/yt.svg" alt="YouTube">
+                    </a></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts JS para funcionalidades interactivas -->
+    <script src='./front-end/js/index.js'></script>
+    <script src="./front-end/js/transcisiones.js" defer></script>
+</body>
+
+</html>

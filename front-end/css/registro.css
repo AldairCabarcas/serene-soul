@@ -1,0 +1,285 @@
+@import url(estilos-generales.css);
+
+/* ========================== */
+/* Animación de entrada del body */
+/* ========================== */
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+  overflow-y: scroll;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================== */
+/* Contenedor principal del formulario */
+/* ========================== */
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 320px;
+  height: auto;
+}
+
+/* ========================== */
+/* Logo y enlace al inicio */
+/* ========================== */
+.form-modal a {
+  display: flex;
+  justify-content: center;
+}
+
+.form-modal img {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+}
+
+/* ========================== */
+/* Título y subtítulo */
+/* ========================== */
+h2 {
+  color: #16254c;
+  text-align: center;
+  font-size: large;
+}
+
+p, span {
+  text-align: center;
+  color: var(--color-subtexto);
+  font-size: 16px;
+}
+
+/* ========================== */
+/* Formulario principal */
+/* ========================== */
+form {
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #a8a0a02c;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+/* ========================== */
+/* Nombre y Apellido */
+/* ========================== */
+.form-nombre-apellido {
+  width: 100%;
+  margin: auto;
+  display: flex;
+}
+
+.form-campo, .form-correo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nombre input,
+.apellido input {
+  width: 130px;
+}
+/* ========================== */
+/* correo  */
+/* ========================== */
+
+.form-correo input {
+  width: 270px;
+}
+
+/* ========================== */
+/* Fecha de nacimiento */
+/* ========================== */
+.form-fecha-nacimiento {
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-fecha-nacimiento select {
+  margin: auto;
+  width: 82px;
+  padding: 10px;
+}
+
+.titulo-genero-nacimiento {
+  margin: auto;
+  width: 90%;
+  display: flex;
+}
+
+.titulo-genero-nacimiento label,
+.titulo-genero {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.titulo_genero-nacimiento img,
+.titulo-genero img {
+  margin: 2px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+/* ========================== */
+/* Género */
+/* ========================== */
+.form-genero-opciones {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-genero {
+  margin-left: 20px;
+}
+
+/* ========================== */
+/* Campo extra si se elige 'Personalizado' */
+/* ========================== */
+.campo-genero-personalizado {
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+.campo-genero-personalizado select,
+.campo-genero-opcional,
+.campo-contraseña {
+  margin: auto;
+  margin-bottom: 10px;
+  width: 96%;
+}
+
+.form-genero-opciones label {
+  width: 90px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* ========================== */
+/* Inputs y Labels generales */
+/* ========================== */
+.form-genero-opciones label,
+input {
+  font-family: var(--fuente-principal);
+  font-weight: normal;
+  margin: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ffffff;
+  color: black;
+  vertical-align: middle;
+  gap: 3px;
+}
+.genero-personalizado input {
+  width: 0;
+}
+label,
+ .titulo_genero-nacimiento {
+  display: flex;
+  margin: 5px 0 2px;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+input,
+select {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* ========================== */
+/* Botón de registro */
+/* ========================== */
+button {
+  margin: auto;
+  width: 95%;
+  margin-bottom: 10px;
+  background-color: #16254c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1f396c;
+}
+/* ================== */
+/* Condiciones */
+/* ==================== */
+.condiciones {
+  font-size: 12px;
+  font-family: var(--fuente-principal);
+  color: var(--color-subtexto);
+  text-align: center;
+  margin: 5px 0;
+  line-height: 1.4;
+  opacity: 0.9; /* Para que no sea tan fuerte */
+}
+
+.condiciones a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.condiciones a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+/* ================== */
+/* Boton redirección a inicio de sección */
+/* ==================== */
+.login-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-link a {
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}

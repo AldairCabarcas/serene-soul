@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres (importante para caracteres especiales) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el tamaño de la vista en dispositivos móviles -->
+    <link rel="stylesheet" href="../css/login.css"> <!-- Vincula el archivo de estilos CSS -->
+    <title>Document</title> <!-- Título que aparecerá en la pestaña del navegador -->
+</head>
+<body>
+    <!-- Contenedor principal de la página de login -->
+    <section class="login-container">
+        <!-- Formulario para iniciar sesión -->
+        <form class="login-form" method="post" id="form-login">
+          <h2>Iniciar Sesión</h2> <!-- Título de la página -->
+
+          <!-- Campo de entrada para el correo electrónico -->
+          <label for="login-correo">Correo electrónico</label>
+          <input type="email" id="login-correo" name="login-correo" placeholder="ejemplo@correo.com">
+          
+          <!-- Campo de entrada para la contraseña -->
+          <div class="campo-password">
+            <label for="login-contraseña">Contraseña</label>
+            <input type="password" id="login-contraseña" name="login-contraseña" placeholder="Tu contraseña">
+            <span id="toggle-login-password" class="icono-ver">👁️</span>
+          </div>
+          
+          
+          <!-- Mensaje de error (inicialmente oculto) -->
+          <p class="mensaje-error oculto" id="contraseñaIncorrecta"></p>
+          
+          <!-- Botón de enviar para ingresar -->
+          <button type="submit">Ingresar</button>
+          
+          <!-- Enlace a la página de registro para usuarios nuevos -->
+          <p class="extra">¿No tienes cuenta? <a href="registro.html">Regístrate</a></p>
+        </form>
+    </section>
+    
+    <!-- Vincula el archivo de JavaScript que controlará la validación y eventos del login -->
+    <script src="../js/login.js"></script>
+</body>
+</html>
+

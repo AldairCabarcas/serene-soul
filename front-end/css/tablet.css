@@ -1,0 +1,95 @@
+@import url(estilos-generales.css);
+
+header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor-logo {
+  margin: auto 0;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+.contenedor-logo img {
+  width: 80px;
+  height: 80px;
+}
+.contenedor-logo h2,
+.eslogan {
+  display: none;
+}
+
+.menu.perfil img {
+  width: 50px;
+  height: 50px;
+}
+.menu-toggle {
+  display: none;
+}
+.menu-navegacion {
+  position: static;
+  margin: auto;
+  padding: 0 10px;
+  width: 75%;
+  display: flex;
+  flex-direction: initial;
+  opacity: 5;
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+.menu-navegacion ul {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  flex-direction: row;
+  vertical-align: middle;
+}
+.menu-navegacion li {
+  width: initial;
+  margin: 10px;
+}
+.menu-navegacion a {
+  text-decoration: none;
+}
+.menu-navegacion a:hover {
+  color: #16254c;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.menu:not(.perfil) .submenu {
+  position: absolute;
+  display: none;
+  width: auto;
+  box-shadow: none;
+  overflow: hidden;
+}
+.menu:not(.perfil):hover .submenu {
+  height: initial;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(6, 51, 90);
+  border-radius: 8px;
+  overflow: submenu;
+}
+.submenu {
+  max-height: initial;
+}
+
+/* MENU */
+
+
+.contenedor-calma {
+  width: 100%;
+  height: 500px;
+}
+.contenedor-calma img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

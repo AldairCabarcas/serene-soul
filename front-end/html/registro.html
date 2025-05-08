@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+
+    <!-- Estilos del formulario de registro -->
+    <link rel="stylesheet" href="../css/registro.css">
+    <!-- Estilo opcional para pantallas grandes (desactivado por ahora) -->
+    <!-- <link rel="stylesheet" href="../css/responsive-inicio.css" media="(min-width: 768px)"> -->
+</head>
+
+<body>
+    <main>
+        <section class="form-modal">
+            <!-- Logo que redirige al inicio -->
+            <a href="index.html" class="volver-inicio">
+                <img src="../image/img/logoweb.png" alt="Logo Serene Soul">
+            </a>
+
+            <!-- Títulos del formulario -->
+            <h2>Crear una cuenta nueva</h2>
+            <p>Es fácil y rápido</p>
+
+            <!-- Formulario de registro -->
+            <form id="formulario" action="https://serene-soul.netlify.app/registrar" method="post">
+                
+                <!-- Nombre y apellido -->
+                <div class="form-nombre-apellido">
+                    <div class="form-campo nombre">
+                        <input type="text" name="campo-nombre" id="campo-nombre" placeholder="Nombre">
+                    </div>
+                    <div class="form-campo apellido">
+                        <input type="text" name="campo-apellido" id="campo-apellido" placeholder="Apellidos">
+                    </div>
+                </div>
+
+                <!-- Correo electrónico -->
+                <div class="form-correo">
+                    <label for="campo-correo">
+                        <input type="email" name="campo-correo" id="campo-correo" placeholder="Correo electrónico">
+                    </label>
+                </div>
+
+                <!-- Fecha de nacimiento con icono de ayuda -->
+                <div class="titulo_genero-nacimiento">
+                    Fecha de nacimiento
+                    <span>
+                        <img src="../image/img/sign.png" alt="signo ayuda" title="Botón de ayuda">
+                    </span>
+                </div>
+
+                <div class="form-fecha-nacimiento">
+                    <!-- Mes -->
+                    <label for="fecha-mes"></label>
+                    <select class="mes" name="mes" id="fecha-mes">
+                        <option value="" disabled selected>Mes</option>
+                        <!-- Opciones de mes -->
+                        <option value="1">Ene</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Abr</option>
+                        <option value="5">May</option>
+                        <option value="6">Jun</option>
+                        <option value="7">Jul</option>
+                        <option value="8">Ago</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dic</option>
+                    </select>
+
+                    <!-- Día (rellenado por JavaScript) -->
+                    <label for="fecha-dia"></label>
+                    <select name="fecha-dia" id="fecha-dia" name="dia">
+                        <option value="" disabled selected>Día</option>
+                    </select>
+
+                    <!-- Año (rellenado por JavaScript) -->
+                    <label for="fecha-año"></label>
+                    <select name="fecha-año" id="fecha-año" name="año">
+                        <option value="" disabled selected>Año</option>
+                    </select>
+                </div>
+
+                <!-- Género con icono de ayuda -->
+                <div class="titulo_genero-nacimiento">
+                    Género
+                    <span>
+                        <img src="../image/img/sign.png" alt="signo ayuda" title="Botón de ayuda">
+                    </span>
+                </div>
+
+                <!-- Opciones de género -->
+                <div class="form-genero-opciones">
+                    <label for="masculino">
+                        Masculino
+                        <input type="radio" name="genero" id="masculino" value="masculino">
+                    </label>
+
+                    <label for="femenino">
+                        Femenino
+                        <input type="radio" name="genero" id="femenino" value="femenino">
+                    </label>
+
+                    <label for="radio-personalizado" class="genero-personalizado">
+                        Personalizado
+                        <input type="radio" name="genero" id="radio-personalizado" value="personalizado">
+                    </label>
+                </div>
+
+                <!-- Campo visible solo si se elige "Personalizado" -->
+                <div id="opcion-personalizado-extra" class="campo-genero-personalizado oculto">
+                    <span>Tu pronombre es visible para todos.</span>
+                    <label for="pronombre">
+                        <select id="pronombre">
+                            <option value="">Selecciona un pronombre</option>
+                            <option value="el">El</option>
+                            <option value="ella">Ella</option>
+                            <option value="elle">Elle</option>
+                        </select>
+                    </label>
+
+                    <input class="campo-genero-opcional" type="text" placeholder="Género (opcional)" name="genero-personalizado" id="generoPersonalizado">
+                </div>
+
+                <!-- Contraseña -->
+                <label for="campo-contraseña"></label>
+                <input type="password" name="campo-contraseña" id="campo-contraseña" class="campo-contraseña"
+                    placeholder="Nueva Contraseña">
+
+                <!-- Botón para enviar el formulario -->
+                <button type="submit">Registrarse</button>
+
+                <!-- Condiciones legales -->
+                <span class="condiciones">
+                    Al hacer clic en "Registrarse", aceptas nuestros Términos, Política de Privacidad y Política de
+                    Cookies. Puedes recibir nuestras notificaciones por SMS y cancelarlas en cualquier momento.
+                </span>
+
+                <!-- Enlace al login si ya tiene cuenta -->
+                <div class="login-link">
+                    <a href="login.html">¿Ya tienes una cuenta?</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Script para manejar lógica de JavaScript del formulario -->
+    <script src="../js/registro.js"></script>
+</body>
+
+</html>
