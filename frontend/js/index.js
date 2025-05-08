@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Si el usuario no está logueado, redirige al login
   if (localStorage.getItem("usuarioLogueado") !== "true") {
-    window.location.href = "../login/login.html";
+    window.location.href = "../frontend/login/login.html";
   }
 
   // === ELEMENTOS DEL DOM ===
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enlaceCerrarSesion.addEventListener("click", (e) => {
       e.preventDefault();
       localStorage.removeItem("usuarioLogueado");
-      window.location.href = "./login/login.html";
+      window.location.href = "../frontend/login/login.html";
     });
   }
 });
