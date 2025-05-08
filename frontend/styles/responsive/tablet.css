@@ -1,4 +1,4 @@
-@import url(estilos-generales.css);
+@import url(../generales.css);
 
 header {
   height: 100px;
@@ -13,10 +13,12 @@ header {
   display: flex;
   justify-content: center;
 }
+
 .contenedor-logo img {
   width: 80px;
   height: 80px;
 }
+
 .contenedor-logo h2,
 .eslogan {
   display: none;
@@ -26,9 +28,11 @@ header {
   width: 50px;
   height: 50px;
 }
+
 .menu-toggle {
   display: none;
 }
+
 .menu-navegacion {
   position: static;
   margin: auto;
@@ -36,11 +40,12 @@ header {
   width: 75%;
   display: flex;
   flex-direction: initial;
-  opacity: 5;
+  opacity: 1; /* corregido */
   background-color: transparent;
   transform: none;
   box-shadow: none;
 }
+
 .menu-navegacion ul {
   width: 100%;
   display: flex;
@@ -48,18 +53,23 @@ header {
   flex-direction: row;
   vertical-align: middle;
 }
+
 .menu-navegacion li {
   width: initial;
-  margin: 10px;
+  margin: var(--espaciado-base);
 }
+
 .menu-navegacion a {
   text-decoration: none;
+  color: var(--color-texto);
 }
+
 .menu-navegacion a:hover {
-  color: #16254c;
-  background-color: #ffffff;
-  border-radius: 10px;
+  color: var(--color-hover);
+  background-color: var(--color-blanco);
+  border-radius: var(--radio-borde);
 }
+
 .menu:not(.perfil) .submenu {
   position: absolute;
   display: none;
@@ -67,25 +77,27 @@ header {
   box-shadow: none;
   overflow: hidden;
 }
+
 .menu:not(.perfil):hover .submenu {
   height: initial;
   display: flex;
   flex-direction: column;
-  background-color: rgb(6, 51, 90);
-  border-radius: 8px;
-  overflow: submenu;
+  background-color: var(--color-principal);
+  border-radius: var(--radio-borde);
+  overflow: hidden;
 }
+
 .submenu {
   max-height: initial;
 }
 
 /* MENU */
 
-
 .contenedor-calma {
   width: 100%;
   height: 500px;
 }
+
 .contenedor-calma img {
   width: 100%;
   height: 100%;

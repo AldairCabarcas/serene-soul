@@ -1,34 +1,25 @@
-:root {
-  /* Colores principales que puedes reutilizar en todo el sitio */
-  --azul-oscuro: #16254c;
-  --azul-claro: #243b6b;
-  --blanco: #fdfdfd;
-  --sombra: rgba(0, 0, 0, 0.2); /* Para sombras suaves */
-}
-
 * {
-  /* Reseteo de márgenes y box-sizing para un diseño más predecible */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif; /* Fuente base del sitio */
+  font-family: var(--fuente-principal, 'Segoe UI', sans-serif);
 }
 
 body {
-  height: 100vh; /* Altura completa de la pantalla */
-  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-claro)); /* Degradado bonito 💙 */
+  height: 100vh;
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-claro));
   display: flex;
-  justify-content: center; /* Centrado horizontal */
-  align-items: center;     /* Centrado vertical */
+  justify-content: center;
+  align-items: center;
 }
 
 .login-container {
-  background-color: var(--blanco); /* Fondo del formulario */
-  padding: 40px; /* Espaciado interno */
-  border-radius: 10px; /* Bordes redondeados */
-  box-shadow: 0 8px 16px var(--sombra); /* Sombra para dar profundidad */
+  background-color: var(--blanco);
+  padding: 40px;
+  border-radius: var(--borde-radius, 10px);
+  box-shadow: 0 8px 16px var(--sombra);
   width: 90%;
-  max-width: 400px; /* Máximo tamaño para que no se vea gigante en pantallas grandes */
+  max-width: 400px;
 }
 
 h2 {
@@ -39,7 +30,7 @@ h2 {
 
 form {
   display: flex;
-  flex-direction: column; /* Campos uno debajo del otro */
+  flex-direction: column;
 }
 
 label {
@@ -49,8 +40,10 @@ label {
 
 input {
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid var(--gris-claro, #ccc);
+  border-radius: var(--borde-radius, 5px);
+  background-color: var(--blanco);
+  color: var(--color-texto, #000);
 }
 
 button {
@@ -59,13 +52,13 @@ button {
   background-color: var(--azul-oscuro);
   color: var(--blanco);
   border: none;
-  border-radius: 5px;
+  border-radius: var(--borde-radius, 5px);
   cursor: pointer;
-  transition: background 0.3s ease; /* Transición suave al pasar el mouse */
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--azul-claro); /* Cambio de color al pasar el mouse */
+  background-color: var(--azul-claro);
 }
 
 .extra {
@@ -80,12 +73,12 @@ button:hover {
 }
 
 .mensaje-error {
-  color: red;
+  color: var(--rojo-error, red);
   margin-top: 10px;
 }
 
 .oculto {
-  display: none; /* Clase útil para mostrar u ocultar elementos desde JS */
+  display: none;
 }
 
 .campo-password {
@@ -95,7 +88,7 @@ button:hover {
 }
 
 .campo-password input {
-  padding-right: 40px; /* deja espacio para el icono */
+  padding-right: 40px;
 }
 
 .icono-ver {

@@ -1,4 +1,4 @@
-@import url(estilos-generales.css); /* Importa estilos generales desde otro archivo */
+@import url(./generales.css); /* Importa estilos generales desde otro archivo */
 
 /* ---------- HEADER ---------- */
 header {
@@ -7,9 +7,9 @@ header {
   height: 188px;
   justify-content: space-between;
   align-content: center;
-  background-color: #16254c;
+  background-color: var(--color-principal);
   padding: 10px 20px;
-  flex-wrap: wrap; /* Permite que los hijos se acomoden en varias líneas si es necesario */
+  flex-wrap: wrap;
 }
 
 .contenedor-logo {
@@ -18,22 +18,22 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* Espacio entre elementos */
+  gap: 10px;
 }
 
 .contenedor-logo img {
-  border-radius: 50%; /* Hace la imagen redonda */
-  border: 2px solid white;
+  border-radius: 50%;
+  border: 2px solid var(--color-blanco);
 }
 
 header h2 {
-  color: white;
+  color: var(--color-blanco);
   font-size: 1.8rem;
   margin: 0;
 }
 
 .eslogan {
-  color: #d0d0d0;
+  color: var(--color-subtexto);
   font-style: italic;
   font-size: 1.4rem;
   margin: 0;
@@ -43,14 +43,14 @@ header h2 {
 
 /* ---------- MENÚ DE NAVEGACIÓN MÓVIL ---------- */
 .menu-navegacion {
-  display: none; /* Oculta el menú inicialmente */
+  display: none;
   position: static;
   top: 20px;
   left: 20px;
   width: 100%;
   padding: 30px;
   height: 100vh;
-  background-color: #16254c;
+  background-color: var(--color-principal);
   box-sizing: border-box;
   overflow-y: auto;
   flex-direction: column;
@@ -58,7 +58,7 @@ header h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease, transform 0.3s ease;
   opacity: 0;
-  transform: translateY(-20px); /* Animación al mostrarse */
+  transform: translateY(-20px);
 }
 
 .menu-navegacion.activo {
@@ -71,6 +71,7 @@ header h2 {
   border-radius: 10px;
   position: absolute;
 }
+
 .menu-navegacion ul {
   margin: auto;
   flex-direction: column;
@@ -83,8 +84,9 @@ header h2 {
   margin: 10px 0;
   list-style-type: none;
 }
+
 .menu-navegacion a {
-  color: white;
+  color: var(--color-blanco);
   font-size: 1.4rem;
   padding: 10px;
   display: block;
@@ -98,24 +100,24 @@ header h2 {
   box-shadow: none;
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 .menu-navegacion .menu {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-
 .menu:hover .submenu {
-  display: none; /* Quita hover porque no aplica bien en móviles */
+  display: none;
 }
 
 .menu.activo .submenu {
-  display: block; /* Muestra submenú al hacer clic */
+  display: block;
   height: 240px;
 }
 
 .menu.activo ul li {
   text-align: left;
-  
 }
+
 /* Submenús plegables */
 .submenu {
   transition: max-height 0.3s ease;
@@ -123,15 +125,13 @@ margin-bottom: 20px;
   overflow-y: scroll;
 }
 
-
 .menu.activo .submenu {
-  max-height: 500px; /* Desplegar cuando activo */
+  max-height: 500px;
 }
-
 
 /* ---------- BOTÓN HAMBURGUESA ---------- */
 .menu-toggle {
-  display: flex; /* Oculto por defecto, solo visible en móviles */
+  display: flex;
   position: absolute;
   left: 25px;
   top: 20px;
@@ -150,18 +150,17 @@ margin-bottom: 20px;
   display: block;
   width: 50%;
   height: 2px;
-  background-color: white;
+  background-color: var(--color-blanco);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Cambia la hamburguesa a X */
 .menu-toggle.activo .menu-icon:nth-child(1) {
   transform: translateY(11px) rotate(45deg);
 }
 
 .menu-toggle.activo .menu-icon:nth-child(2) {
-  opacity: 0; /* Oculta la línea del medio */
+  opacity: 0;
 }
 
 .menu-toggle.activo .menu-icon:nth-child(3) {
@@ -171,39 +170,37 @@ margin-bottom: 20px;
 /* Contenedor del perfil en la parte superior derecha */
 .perfil-container {
   position: absolute;
-  right: 20px; /* Ubica el perfil a la derecha */
-  top: 10px; /* Un pequeño margen superior */
+  right: 20px;
+  top: 10px;
 }
 
 /* Submenú del perfil */
 .perfil .submenu {
   width: 80px;
-  display: none; /* Inicialmente oculto */
+  display: none;
   position: absolute;
   right: 0;
-  top: 50px; /* Desplazado hacia abajo */
-  background-color: white;
+  top: 50px;
+  background-color: var(--color-blanco);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
   z-index: 999;
 }
 
-/* Mostrar el submenú cuando el perfil está activo */
 .perfil.activo .submenu {
   display: block;
 }
 
-/* Submenú links */
 .perfil .submenu a {
-  color: #16254c;
+  color: var(--color-principal);
   padding: 10px 10px;
   display: block;
   text-decoration: none;
 }
 
 .perfil .submenu a:hover {
-  background-color: #f0f4f8;
+  background-color: var(--color-azul-claro);
 }
 
 /* Para hacer que el perfil funcione como menú desplegable */
@@ -236,19 +233,18 @@ margin-bottom: 20px;
 }
 
 .perfil-btn img {
-  width: 40px; /* Ajusta el tamaño de la imagen */
+  width: 40px;
   height: 40px;
-  border-radius: 50%; /* Hace la imagen circular */
-  object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  border-radius: 50%;
+  object-fit: cover;
   cursor: pointer;
 }
+
 .submenu-perfil li a {
   font-weight: 500;
-  color: #1f3c68;
+  color: var(--color-texto);
   text-decoration: none;
 }
-
-/* Estilo de la imagen de perfil */
 
 /* ---------- SECCIÓN DE CONTENIDO ---------- */
 .salud-mental,
@@ -274,13 +270,13 @@ margin-bottom: 20px;
 
 .mensaje-salud h2 {
   font-size: 2.2rem;
-  color: #1e3d59;
+  color: var(--color-principal);
   margin-bottom: 10px;
 }
 
 .mensaje-salud p {
   font-size: 1.6rem;
-  color: #333;
+  color: var(--color-subtexto);
   line-height: 1.6;
 }
 
@@ -289,18 +285,17 @@ margin-bottom: 20px;
   padding: 2rem;
   margin: 2rem auto;
   max-width: 800px;
-  background-color: #f9f9f9;
-  border-left: 4px solid #3a5a80;
+  background-color: var(--color-secundario);
+  border-left: 4px solid var(--color-principal);
   border-radius: 8px;
-  color: #333;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--color-texto);
 }
 
 .origen-trastorno h2 {
   font-size: 2.4rem;
   margin-bottom: 1.5rem;
-  color: #2a3f5f;
-  border-bottom: 2px solid #3a5a80;
+  color: var(--color-principal);
+  border-bottom: 2px solid var(--color-principal);
   padding-bottom: 0.5rem;
 }
 
@@ -309,16 +304,16 @@ margin-bottom: 20px;
   line-height: 1.7;
   margin-bottom: 1.5rem;
   text-align: justify;
-  color: #444;
+  color: var(--color-subtexto);
 }
 
 .origen-trastorno strong {
-  color: #1f3c68;
+  color: var(--color-principal);
 }
 
 .origen-trastorno em {
   font-style: italic;
-  color: #5b708d;
+  color: var(--color-enlace);
 }
 
 /* ---------- NOTAS DESCRIPTIVAS ---------- */
@@ -326,7 +321,7 @@ margin-bottom: 20px;
   margin: 2rem auto;
   padding: 1.5rem;
   max-width: 1200px;
-  background-color: #f8f9fa;
+  background-color: var(--color-secundario);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -334,9 +329,8 @@ margin-bottom: 20px;
 .notas-descriptivas h2 {
   text-align: center;
   font-size: 2rem;
-  color: #2d3c4a;
+  color: var(--color-principal);
   margin-bottom: 2rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .notas {
@@ -344,7 +338,7 @@ margin-bottom: 20px;
   align-items: center;
   gap: 1rem;
   margin: 1rem 0;
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -353,7 +347,7 @@ margin-bottom: 20px;
 }
 
 .notas:hover {
-  transform: translateY(-3px); /* Efecto hover de flotación */
+  transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -367,13 +361,13 @@ margin-bottom: 20px;
 .notas p {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #34495e;
+  color: var(--color-texto);
   margin-left: 1rem;
 }
 
 /* ---------- FOOTER ---------- */
 footer {
-  background-color: #f0f4f8;
+  background-color: var(--color-secundario);
   padding: 2rem;
   text-align: center;
   border-top: 1px solid #d0d7dd;
@@ -381,14 +375,14 @@ footer {
 
 .footer p:first-child {
   font-size: 1rem;
-  color: #555;
+  color: var(--color-subtexto);
   margin-bottom: 0.3rem;
 }
 
 .footer p:nth-child(2) {
   font-weight: bold;
   font-size: 1.2rem;
-  color: #2a3d50;
+  color: var(--color-principal);
   margin-bottom: 1rem;
 }
 
@@ -399,5 +393,6 @@ footer {
 }
 
 .redes span:hover {
-  transform: scale(1.2); /* Hace zoom al pasar el mouse */
+  transform: scale(1.2);
 }
+

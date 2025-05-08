@@ -50,7 +50,7 @@ body {
 /* Título y subtítulo */
 /* ========================== */
 h2 {
-  color: #16254c;
+  color: var(--color-principal);
   text-align: center;
   font-size: large;
 }
@@ -70,8 +70,8 @@ form {
   display: flex;
   flex-direction: column;
   width: 300px;
-  border: 1px solid #a8a0a02c;
-  border-radius: 10px;
+  border: 1px solid rgba(168, 160, 160, 0.17);
+  border-radius: var(--radio-borde);
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1000;
 }
@@ -95,10 +95,10 @@ form {
 .apellido input {
   width: 130px;
 }
-/* ========================== */
-/* correo  */
-/* ========================== */
 
+/* ========================== */
+/* Correo  */
+/* ========================== */
 .form-correo input {
   width: 270px;
 }
@@ -164,6 +164,7 @@ form {
   width: 100%;
   margin: auto;
 }
+
 .campo-genero-personalizado select,
 .campo-genero-opcional,
 .campo-contraseña {
@@ -179,10 +180,10 @@ form {
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   border: 1px solid #ccc;
-  border-radius: 8px;
-  color: #000;
+  border-radius: var(--radio-borde);
+  color: var(--color-texto);
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -198,20 +199,22 @@ input {
   border: 1px solid;
   border-radius: 5px;
   padding: 5px;
-  background-color: #ffffff;
-  color: black;
+  background-color: var(--color-blanco);
+  color: var(--color-texto);
   vertical-align: middle;
   gap: 3px;
 }
+
 .genero-personalizado input {
   width: 0;
 }
+
 label,
- .titulo_genero-nacimiento {
+.titulo_genero-nacimiento {
   display: flex;
   margin: 5px 0 2px;
   font-size: 1.4rem;
-  color: #ffffff;
+  color: var(--color-blanco);
   font-weight: 500;
 }
 
@@ -230,8 +233,8 @@ button {
   margin: auto;
   width: 95%;
   margin-bottom: 10px;
-  background-color: #16254c;
-  color: white;
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
   padding: 10px;
   border: none;
   border-radius: 4px;
@@ -241,6 +244,7 @@ button {
 button:hover {
   background-color: #1f396c;
 }
+
 /* ================== */
 /* Condiciones */
 /* ==================== */
@@ -251,11 +255,11 @@ button:hover {
   text-align: center;
   margin: 5px 0;
   line-height: 1.4;
-  opacity: 0.9; /* Para que no sea tan fuerte */
+  opacity: 0.9;
 }
 
 .condiciones a {
-  color: #ffffff;
+  color: var(--color-blanco);
   text-decoration: none;
   font-weight: bold;
 }
@@ -266,7 +270,7 @@ button:hover {
 }
 
 /* ================== */
-/* Boton redirección a inicio de sección */
+/* Botón redirección a inicio de sesión */
 /* ==================== */
 .login-link {
   text-align: center;
@@ -275,7 +279,7 @@ button:hover {
 
 .login-link a {
   font-size: 1.6rem;
-  color: #ffffff;
+  color: var(--color-blanco);
   font-weight: bold;
   text-decoration: none;
 }
