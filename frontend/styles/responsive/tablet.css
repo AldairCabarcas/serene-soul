@@ -56,7 +56,7 @@ header {
 
 .menu-navegacion li {
   width: initial;
-  margin: var(--espaciado-base);
+  margin: var(--espaciado-submenu);
 }
 
 .menu-navegacion a {

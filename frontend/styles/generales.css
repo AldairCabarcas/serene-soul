@@ -20,6 +20,7 @@
   /* Tipografía y espaciado */
   --fuente-principal: 'Segoe UI', sans-serif;
   --espaciado-base: 16px;
+  --espaciado-submenu: 10px
 
   /* Bordes */
   --radio-borde: 8px;
