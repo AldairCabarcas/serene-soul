@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
           // Redirige dependiendo del entorno
           if (location.hostname === "127.0.0.1") {
-            window.location.href = "http://localhost:3000/dashboard"; // Redirige al entorno local
+            window.location.href = "http://127.0.0.1:5500/index.html"; // Redirige al entorno local
           } else {
-            window.location.href = "https://serene-soul.netlify.app/dashboard"; // Redirige a producción (Netlify)
+            window.location.href = "https://serene-soul.netlify.app"; // Redirige a producción (Netlify)
           }
         } else {
           // Mostrar errores personalizados según el estado

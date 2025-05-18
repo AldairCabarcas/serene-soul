@@ -1,107 +1,182 @@
-@import url(../generales.css);
+@import url(estilos-generales.css);
 
-header {
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contenedor-logo {
+    margin: auto 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contenedor-logo img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contenedor-logo h2,
+  .eslogan {
+    display: none;
+  }
+
+  .menu.perfil img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-navegacion {
+    position: static;
+    margin: auto;
+    padding: 0 10px;
+    width: 75%;
+    display: flex;
+    flex-direction: initial;
+    opacity: 5;
+    background-color: transparent;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .menu-navegacion ul {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    vertical-align: middle;
+  }
+
+  .menu-navegacion li {
+    width: initial;
+    margin: 10px;
+  }
+
+  .menu-navegacion a {
+    text-decoration: none;
+  }
+
+  .menu-navegacion a:hover {
+    color: #16254c;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+
+  .menu:not(.perfil) .submenu {
+    position: absolute;
+    display: none;
+    width: auto;
+    box-shadow: none;
+    overflow: hidden;
+  }
+
+  .menu:not(.perfil):hover .submenu {
+    height: initial;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(6, 51, 90);
+    border-radius: 8px;
+    overflow: submenu;
+  }
+
+  .submenu {
+    max-height: initial;
+  }
+  .submenu li {
+    margin: 2px 10px;
+  }
+
+  .contenedor-calma {
+    width: 100%;
+    height: 500px;
+  }
+
+  .contenedor-calma img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .mensaje-salud {
+    margin-top: 20px;
+  }
+
+  .origen-trastorno {
+    display: none;
+  }
+
+  .contendor-concepto--notas {
+    display: grid;
+    width: 90%;
+  }
+  .concepto_serene {
+    padding: 10px;
+    display: block;
+    background-color: #16254c;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.705);
+    margin: 2rem auto;
+    max-width: 800px;
+    max-height: 250px;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.7;
+    color: #d3e1ee;
+  }
+
+  .concepto_serene h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #bccfc7;
+    text-align: center;
+  }
+
+  .concepto_serene p {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
 }
-
-.contenedor-logo {
-  margin: auto 0;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-}
-
-.contenedor-logo img {
-  width: 80px;
-  height: 80px;
-}
-
-.contenedor-logo h2,
-.eslogan {
-  display: none;
-}
-
-.menu.perfil img {
-  width: 50px;
-  height: 50px;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-.menu-navegacion {
-  position: static;
-  margin: auto;
-  padding: 0 10px;
-  width: 75%;
-  display: flex;
-  flex-direction: initial;
-  opacity: 1; /* corregido */
-  background-color: transparent;
-  transform: none;
-  box-shadow: none;
-}
-
-.menu-navegacion ul {
-  width: 100%;
-  display: flex;
-  justify-content: right;
-  flex-direction: row;
-  vertical-align: middle;
-}
-
-.menu-navegacion li {
-  width: initial;
-  margin: var(--espaciado-submenu);
-}
-
-.menu-navegacion a {
-  text-decoration: none;
-  color: var(--color-blanco);
-}
-
-.menu-navegacion a:hover {
-  color: var(--color-hover);
-  background-color: var(--color-blanco);
-  border-radius: var(--radio-borde);
-}
-
-.menu:not(.perfil) .submenu {
-  position: absolute;
-  display: none;
-  width: auto;
-  box-shadow: none;
-  overflow: hidden;
-}
-
-.menu:not(.perfil):hover .submenu {
-  height: initial;
-  display: flex;
+.notas {
   flex-direction: column;
+  width: 130px;
   background-color: var(--color-principal);
-  border-radius: var(--radio-borde);
-  overflow: hidden;
+  gap: 0;
+}
+.notas p {
+  margin: 0 auto;
+  width: 100px;
+  height: 30%;
+  text-align: center;
+  align-content: center;
+  background-color: var(--color-blanco);
+  border-radius: 0 0 5px 5px;
 }
 
-.submenu {
-  max-height: initial;
-}
-
-/* MENU */
-
-.contenedor-calma {
-  width: 100%;
-  height: 500px;
-}
-
-.contenedor-calma img {
+.notas-descriptivas {
+  display: grid;
+  grid-template-columns: 34% 22% 22% 22%;
+  grid-template-rows: 50% 50%;
+  background-color: #ffffff;
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  justify-items: center;
+}
+.notas img {
+  width: 100px;
+  height: 80px;
+  border-radius: 5px 5px 0 0;
+}
+
+.notas--suicidio {
+  grid-column-start: 4;
 }

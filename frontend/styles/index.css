@@ -280,6 +280,19 @@ header h2 {
   line-height: 1.6;
 }
 
+.btn-cita{
+  margin-top: 30px;
+}
+
+.btn-cita button{
+  height: 40px;
+  width: 120px;
+  background-color: var(--color-principal);
+  border-radius: 5px;
+  border: none;
+  color: var(--color-blanco);
+}
+
 /* ---------- ORIGEN DE TRASTORNOS ---------- */
 .origen-trastorno {
   padding: 2rem;
@@ -361,6 +374,7 @@ header h2 {
 .notas p {
   font-size: 1.3rem;
   font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--color-texto);
   margin-left: 1rem;
 }
